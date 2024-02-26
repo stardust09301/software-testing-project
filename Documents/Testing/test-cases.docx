@@ -1,0 +1,12 @@
+void test_getNumRows() {
+    // Test with a valid pointer
+    struct Map testMap = populateMap();
+    int numRows = getNumRows(&testMap);
+    assert(numRows == testMap.numRows);
+
+    // Test with an invalid pointer (nullptr)
+    int invalidNumRows = getNumRows(nullptr);
+    assert(invalidNumRows == -1);
+
+    printf("Test Passed!\n");
+}
